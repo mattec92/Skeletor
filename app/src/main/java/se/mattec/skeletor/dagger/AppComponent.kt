@@ -1,4 +1,4 @@
-package se.mattec.truechat.dagger
+package se.mattec.skeletor.dagger
 
 import dagger.Component
 import javax.inject.Singleton

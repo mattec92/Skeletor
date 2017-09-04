@@ -1,4 +1,4 @@
-package se.mattec.truechat
+package se.mattec.skeletor
 
 import org.junit.Test
 

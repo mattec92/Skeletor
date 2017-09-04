@@ -1,9 +1,9 @@
-package se.mattec.truechat.views.activities
+package se.mattec.skeletor.views.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import se.mattec.truechat.R
-import se.mattec.truechat.dagger.Dagger
+import se.mattec.skeletor.R
+import se.mattec.skeletor.dagger.Dagger
 
 class MainActivity : AppCompatActivity() {
 

@@ -7,7 +7,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "se.mattec.truechat"
+        applicationId "se.mattec.skeletor"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1

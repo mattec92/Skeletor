@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="se.mattec.truechat"
+<manifest package="se.mattec.skeletor"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name=".TrueChatApplication"
+        android:name="se.mattec.skeletor.SkeletorApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".views.activities.MainActivity">
+        <activity android:name="se.mattec.skeletor.views.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

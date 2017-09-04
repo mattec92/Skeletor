@@ -1,13 +1,13 @@
-package se.mattec.truechat.dagger
+package se.mattec.skeletor.dagger
 
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import se.mattec.truechat.TrueChatApplication
+import se.mattec.skeletor.SkeletorApplication
 import javax.inject.Singleton
 
 @Module
-class DaggerModule(val application: TrueChatApplication) {
+class DaggerModule(val application: SkeletorApplication) {
 
     @Provides
     @Singleton
@@ -17,7 +17,7 @@ class DaggerModule(val application: TrueChatApplication) {
 
     @Provides
     @Singleton
-    fun provideTrueChatApplication(): TrueChatApplication {
+    fun provideApplication(): SkeletorApplication {
         return application
     }
 

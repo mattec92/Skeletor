@@ -1,12 +1,10 @@
-package se.mattec.truechat
+package se.mattec.skeletor
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
-
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("se.mattec.truechat", appContext.packageName)
+        assertEquals("se.mattec.skeletor", appContext.packageName)
     }
 }

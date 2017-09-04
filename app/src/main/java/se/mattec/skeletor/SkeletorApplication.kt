@@ -1,12 +1,12 @@
-package se.mattec.truechat
+package se.mattec.skeletor
 
 import android.app.Application
-import se.mattec.truechat.dagger.AppComponent
-import se.mattec.truechat.dagger.DaggerAppComponent
-import se.mattec.truechat.dagger.DaggerModule
+import se.mattec.skeletor.dagger.AppComponent
+import se.mattec.skeletor.dagger.DaggerAppComponent
+import se.mattec.skeletor.dagger.DaggerModule
 import timber.log.Timber
 
-class TrueChatApplication : Application() {
+class SkeletorApplication : Application() {
 
     lateinit var appComponent: AppComponent
 
