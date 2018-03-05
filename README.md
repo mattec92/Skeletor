@@ -6,7 +6,6 @@ A skeleton for quick project bootstrapping.
 
 * Dagger
 * Timber
-* ButterKnife
 * RxJava, RxAndroid, RxBinding
 
 ## Licence
