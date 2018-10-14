@@ -4,7 +4,7 @@ A skeleton for quick project bootstrapping.
 
 ## What is setup?
 
-* Dagger
+* Koin
 * Timber
 * RxJava, RxAndroid, RxBinding
 * Gradle Versions Plugin

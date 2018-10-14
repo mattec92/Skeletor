@@ -1,16 +1,24 @@
 package se.mattec.skeletor.views.activities
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import org.koin.android.ext.android.get
+import org.koin.android.ext.android.inject
 import se.mattec.skeletor.R
-import se.mattec.skeletor.dagger.Dagger
+import se.mattec.skeletor.SkeletorApplication
 
 class MainActivity : AppCompatActivity() {
+
+    private val context: Context by inject()
+    private val application: SkeletorApplication by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Dagger.component(this).inject(this);
+
+        val context: Context = get()
+        val application: SkeletorApplication = get()
     }
 
 }

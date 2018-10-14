@@ -1,30 +1,24 @@
 package se.mattec.skeletor
 
 import android.app.Application
-import se.mattec.skeletor.dagger.AppComponent
-import se.mattec.skeletor.dagger.DaggerAppComponent
-import se.mattec.skeletor.dagger.DaggerModule
+import org.koin.android.ext.android.startKoin
+import se.mattec.skeletor.koin.appModule
 import timber.log.Timber
 
 class SkeletorApplication : Application() {
 
-    lateinit var appComponent: AppComponent
-
     override fun onCreate() {
         super.onCreate()
         initTimber()
-        initDagger()
+        initKoin()
     }
 
-    fun initTimber() {
+    private fun initTimber() {
         Timber.plant(Timber.DebugTree())
     }
 
-    fun initDagger() {
-        appComponent = DaggerAppComponent.builder()
-                .daggerModule(DaggerModule(this))
-                .build()
-        appComponent.inject(this)
+    private fun initKoin() {
+        startKoin(this, listOf(appModule(this)))
     }
 
 }
