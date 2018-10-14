@@ -7,6 +7,7 @@ A skeleton for quick project bootstrapping.
 * Dagger
 * Timber
 * RxJava, RxAndroid, RxBinding
+* Gradle Versions Plugin
 
 ## Licence
 

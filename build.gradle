@@ -1,23 +1,26 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+apply plugin: "com.github.ben-manes.versions"
+
 buildscript {
     ext {
         versions = [
                 android   : [
                         min       : 21,
-                        target    : 27,
-                        compile   : 27,
-                        buildtools: '27.0.3'
+                        target    : 28,
+                        compile   : 28,
+                        buildtools: '28.0.3'
                 ],
-                kotlin    : '1.2.30',
-                plugin    : '3.0.1',
-                support   : '27.1.0',
-                constraint: '1.0.2',
-                timber    : '4.6.1',
-                rxjava    : '2.1.3',
-                rxandroid : '2.0.1',
-                rxbinding : '2.0.0',
-                dagger    : '2.11'
+                kotlin    : '1.2.71',
+                plugin    : '3.2.1',
+                support   : '28.0.0',
+                constraint: '1.1.3',
+                timber    : '4.7.1',
+                rxjava    : '2.2.2',
+                rxandroid : '2.1.0',
+                rxbinding : '2.2.0',
+                dagger    : '2.17',
+                versions  : '0.20.0'
         ]
     }
     repositories {
@@ -27,6 +30,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:${versions.plugin}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        classpath "com.github.ben-manes:gradle-versions-plugin:${versions.versions}"
     }
 }
 
@@ -39,4 +43,17 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+dependencyUpdates.resolutionStrategy {
+    componentSelection { rules ->
+        rules.all { ComponentSelection selection ->
+            boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'preview'].any { qualifier ->
+                selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+            }
+            if (rejected) {
+                selection.reject('Release candidate')
+            }
+        }
+    }
 }
