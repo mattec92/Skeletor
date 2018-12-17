@@ -2,7 +2,7 @@ package se.mattec.skeletor.views.activities
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 import se.mattec.skeletor.R
